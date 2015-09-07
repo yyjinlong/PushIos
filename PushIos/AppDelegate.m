@@ -57,23 +57,36 @@
     NSLog(@"注册失败，无法获取deviceToken，错误原因：%@", error);
 }
 
-#pragma mark - 接收远程推送过来的消息
--(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+#pragma mark - 点击接收推送过来的消息(分两种情况：app正在运行或者运行在后台)
+-(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
     NSLog(@"接收到的推送消息为：%@", userInfo);
     
-    NSString* pushTip = userInfo[@"aps"][@"alert"];
-    NSLog(@"推送提示信息为： %@", pushTip);
-    
-    UIAlertView *alert =
-    [ [UIAlertView alloc ] initWithTitle : @"yPush"
-                                 message : pushTip
-                                delegate : self
-                       cancelButtonTitle : @"取消"
-                       otherButtonTitles : @"查看", nil];
-    [alert show ];
+    if (application.applicationState == UIApplicationStateActive)
+    {
+        // 获得焦点,表明运行在前台
+        NSLog(@"ypush application 运行在前台......");
+        
+        // 运行在前台,当来推送直接提示对话框展示
+        NSString* pushTip = userInfo[@"aps"][@"alert"];
+        NSLog(@"推送提示信息为： %@", pushTip);
+        
+        UIAlertView *alert =
+        [[UIAlertView alloc ] initWithTitle : @"yPush"
+                                    message : pushTip
+                                   delegate : self
+                          cancelButtonTitle : @"取消"
+                          otherButtonTitles : @"查看", nil];
+        [alert show ];
+    }
+    else if (application.applicationState == UIApplicationStateInactive)
+    {
+        // 失去焦点,表明运行在后台
+        NSLog(@"ypush application 运行在后台......");
+        
+        // 运行在后台,点击后,直接进入详情界面显示
+    }
 }
-
 
 
 #pragma mark - UIAlertViewDelegate 代理方法，获取点击按钮的索引并获取内容

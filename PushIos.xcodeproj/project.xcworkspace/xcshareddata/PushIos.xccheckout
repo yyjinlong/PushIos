@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AC6AAEC6-FE4F-45BF-8722-3BBDC4279D25</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PushIos</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4882FB92FA6649F50A5F3888DE804CB5655B554D</key>
+		<string>https://github.com/yyjinlong/PushIos.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PushIos.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4882FB92FA6649F50A5F3888DE804CB5655B554D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yyjinlong/PushIos.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4882FB92FA6649F50A5F3888DE804CB5655B554D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4882FB92FA6649F50A5F3888DE804CB5655B554D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PushIos</string>
+		</dict>
+	</array>
+</dict>
+</plist>

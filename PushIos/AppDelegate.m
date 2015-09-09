@@ -75,7 +75,7 @@
         [[UIAlertView alloc ] initWithTitle : @"yPush"
                                     message : pushTip
                                    delegate : self
-                          cancelButtonTitle : @"取消"
+                          cancelButtonTitle : @"忽略"
                           otherButtonTitles : @"查看", nil];
         [alert show ];
     }
